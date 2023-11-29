@@ -10,14 +10,14 @@ type WebSocket struct {
 	Cursor int
 }
 
-func NewWebsocket(url string) *WebSocket {
+func NewWebsocket(url string) (*WebSocket, error) {
 	if conn, _, err := websocket.DefaultDialer.Dial(url, nil); err != nil {
-		return nil
+		return nil, err
 	} else {
 		return &WebSocket{
 			Conn:   conn,
 			Cursor: 0,
-		}
+		}, nil
 	}
 }
 
