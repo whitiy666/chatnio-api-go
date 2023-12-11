@@ -2,7 +2,7 @@ package chatnio
 
 import (
 	"fmt"
-	"github.com/Deeptrain-Community/chatnio-api-go/utils"
+	"github.com/whitiy666/chatnio-api-go/utils"
 	"os"
 	"strings"
 )

@@ -1,6 +1,6 @@
 package chatnio
 
-import "github.com/Deeptrain-Community/chatnio-api-go/utils"
+import "github.com/whitiy666/chatnio-api-go/utils"
 
 type Chat struct {
 	Id    int

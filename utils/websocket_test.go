@@ -5,8 +5,8 @@ import (
 )
 
 func TestNewWebsocket(t *testing.T) {
-	ws := NewWebsocket("wss://api.chatnio.net/chat")
-	if ws == nil {
+	ws, err := NewWebsocket("wss://api.chatnio.net/chat")
+	if err != nil || ws == nil {
 		t.Error("websocket is nil")
 	}
 }

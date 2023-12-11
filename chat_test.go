@@ -2,7 +2,7 @@ package chatnio
 
 import (
 	"fmt"
-	"github.com/Deeptrain-Community/chatnio-api-go/utils"
+	"github.com/whitiy666/chatnio-api-go/utils"
 	"testing"
 )
 
@@ -11,7 +11,10 @@ func TestChat_AskStream(t *testing.T) {
 		return
 	}
 
-	chat := instance.NewChat(-1)
+	chat, err := instance.NewChat(-1)
+	if err != nil {
+		return
+	}
 	defer chat.DeferClose()
 
 	chat.AskStream(&ChatRequestForm{
@@ -27,7 +30,10 @@ func TestChat_Ask(t *testing.T) {
 		return
 	}
 
-	chat := instance.NewChat(-1)
+	chat, err := instance.NewChat(-1)
+	if err != nil {
+		return
+	}
 	defer chat.DeferClose()
 
 	channel := make(chan ChatPartialResponse)
