@@ -1,4 +1,4 @@
-module github.com/Deeptrain-Community/chatnio-api-go
+module github.com/whitiy666/chatnio-api-go
 
 go 1.20
 
