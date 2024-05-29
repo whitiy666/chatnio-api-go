@@ -21,10 +21,11 @@ type ChatRequestForm struct {
 }
 
 type ChatPartialResponse struct {
-	Message string  `json:"message"`
-	Keyword string  `json:"keyword"`
-	Quota   float32 `json:"quota"`
-	End     bool    `json:"end"`
+	Message      string  `json:"message"`
+	Conversation int64   `json:"conversation"`
+	Keyword      string  `json:"keyword"`
+	Quota        float32 `json:"quota"`
+	End          bool    `json:"end"`
 }
 
 func (i *Instance) NewChat(id int) (*Chat, error) {
